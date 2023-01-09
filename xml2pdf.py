@@ -30,7 +30,6 @@ def xml_to_pdf(xml_string, pdf_file):
     def process_element(element, x, y, level):
         # Add the tag name to the PDF
         tag = element.tag.upper()
-        print(tag)
         value = element.text
         if value is None:
             pdf.drawString(x, y, f"{'  ' * level}{tag}")
